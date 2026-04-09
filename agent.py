@@ -205,6 +205,46 @@ def _get_closed_pips(ticket: int, info: dict) -> float | None:
         return None
 
 
+# MT5 Deal-Reason Codes → lesbare Gründe
+_DEAL_REASON_MAP = {
+    0: "Manual",        # DEAL_REASON_CLIENT
+    1: "Mobile",        # DEAL_REASON_MOBILE
+    2: "Web",           # DEAL_REASON_WEB
+    3: "EA/Agent",      # DEAL_REASON_EXPERT
+    4: "SL Hit",        # DEAL_REASON_SL
+    5: "TP Hit",        # DEAL_REASON_TP
+    6: "Stop-Out",      # DEAL_REASON_SO
+    7: "Rollover",      # DEAL_REASON_ROLLOVER
+    8: "Margin",        # DEAL_REASON_VMARGIN
+}
+
+
+def _detect_close_reason(ticket: int, info: dict) -> str:
+    """Erkennt den Schließ-Grund aus der MT5 Deal-History."""
+    try:
+        from datetime import timezone
+        date_from = dt.datetime.now(timezone.utc) - timedelta(days=14)
+        date_to = dt.datetime.now(timezone.utc) + timedelta(days=1)
+        all_deals = mt5.history_deals_get(date_from, date_to)
+        if not all_deals:
+            return info.get("close_reason", "unknown")
+
+        pos_deals = [d for d in all_deals if d.position_id == ticket]
+        close_d = next((d for d in pos_deals if d.entry == mt5.DEAL_ENTRY_OUT), None)
+
+        if close_d and hasattr(close_d, "reason"):
+            reason_text = _DEAL_REASON_MAP.get(close_d.reason, f"Code {close_d.reason}")
+            # Bei EA/Agent: schaue ob trade_manager einen Grund gesetzt hat
+            if close_d.reason == 3 and info.get("close_reason", "unknown") != "unknown":
+                return info.get("close_reason")
+            return reason_text
+
+    except Exception as e:
+        log.debug(f"Close-Reason #{ticket}: {e}")
+
+    return info.get("close_reason", "unknown")
+
+
 def check_closed_trades(state: dict, risk: RiskManager):
     memory       = get_memory()
     agent_magics = set(MAGIC_NUMBERS.values())
@@ -217,7 +257,7 @@ def check_closed_trades(state: dict, risk: RiskManager):
         info   = tracked[ticket_str]
         ticket = int(ticket_str)
         pips   = _get_closed_pips(ticket, info)
-        reason = info.get("close_reason", "unknown")
+        reason = _detect_close_reason(ticket, info)
 
         if pips is not None:
             prev_bl = memory.is_blacklisted(info["symbol"], info["pattern"], info["timeframe"])[0]

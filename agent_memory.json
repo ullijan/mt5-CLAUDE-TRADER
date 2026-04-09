@@ -454,18 +454,18 @@
       "symbol": "GBPCHF",
       "pattern": "InsideBar",
       "timeframe": "H1",
-      "trades": 1,
+      "trades": 2,
       "wins": 0,
-      "losses": 1,
-      "total_pips": -11.6,
+      "losses": 2,
+      "total_pips": -21.4,
       "win_pips": 0.0,
-      "loss_pips": 11.6,
-      "streak": -1,
+      "loss_pips": 21.4,
+      "streak": -2,
       "blacklisted": false,
       "blacklist_reason": "",
       "blacklisted_at": "",
       "lot_factor": 1.0,
-      "last_update": "2026-04-09T13:53:06.539512",
+      "last_update": "2026-04-09T21:01:25.434367",
       "notes": []
     },
     "GBPAUD|InsideBar|H1": {
@@ -502,6 +502,24 @@
       "blacklisted_at": "",
       "lot_factor": 1.0,
       "last_update": "2026-04-09T20:43:55.027011",
+      "notes": []
+    },
+    "AUDJPY|InsideBar|H1": {
+      "symbol": "AUDJPY",
+      "pattern": "InsideBar",
+      "timeframe": "H1",
+      "trades": 1,
+      "wins": 0,
+      "losses": 1,
+      "total_pips": -3.1,
+      "win_pips": 0.0,
+      "loss_pips": 3.1,
+      "streak": -1,
+      "blacklisted": false,
+      "blacklist_reason": "",
+      "blacklisted_at": "",
+      "lot_factor": 1.0,
+      "last_update": "2026-04-09T21:01:25.818487",
       "notes": []
     }
   },
@@ -625,12 +643,12 @@
     },
     "GBPCHF": {
       "symbol": "GBPCHF",
-      "trades": 3,
+      "trades": 4,
       "wins": 0,
-      "total_pips": -26.439999999999998,
+      "total_pips": -36.239999999999995,
       "lot_factor": 1.0,
       "notes": [],
-      "last_update": "2026-04-09T13:53:06.539512"
+      "last_update": "2026-04-09T21:01:25.434367"
     },
     "NZDUSD": {
       "symbol": "NZDUSD",
@@ -643,12 +661,12 @@
     },
     "AUDJPY": {
       "symbol": "AUDJPY",
-      "trades": 1,
+      "trades": 2,
       "wins": 1,
-      "total_pips": 37.7,
+      "total_pips": 34.6,
       "lot_factor": 1.0,
       "notes": [],
-      "last_update": "2026-04-09T13:47:36.097271"
+      "last_update": "2026-04-09T21:01:25.818487"
     },
     "EURUSD": {
       "symbol": "EURUSD",
@@ -661,5 +679,5 @@
     }
   },
   "global_notes": [],
-  "last_saved": "2026-04-09T20:43:55.027528"
+  "last_saved": "2026-04-09T21:01:25.818487"
 }
