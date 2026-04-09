@@ -1,0 +1,14 @@
+{
+  "rules": [
+    "GBPAUD: Bearishe Setups funktionieren gut wenn D1 Preis klar unter beiden EMAs + H4 EMA20 Rejection",
+    "EURNZD: Bullishe Erholungen von Major Lows (wie 1.96) haben hohes Potenzial wenn beide Timeframes aligned",
+    "GBPNZD: Vorsicht bei Käufen in der 2.32 Widerstandszone - erst klaren Break abwarten",
+    "NZDCAD: Death Cross Formationen brauchen mehr Bestätigung - nicht sofort bei erstem bearishen Signal einsteigen",
+    "CAD-Paare: Bei USDCAD Rejection an 1.3950 - Trade nur eingehen wenn H4 klar bearishe Kerzen folgen",
+    "EURAUD: Support-Bounces nur traden wenn D1 Trend neutral/bullish - nicht gegen klaren D1 Abwärtstrend",
+    "Failed Breakouts: Sehr reliable wenn sofort mit EMA-Penetration bestätigt (wie EURGBP 0.8740 Break)",
+    "Counter-Trend Regel: Keine Counter-Trend Trades wenn D1 klar trending in Gegenrichtung",
+    "Quality C Filter: Paare zwischen D1 EMAs mit flachen EMAs meist choppy - Skip ist meist richtig"
+  ],
+  "updated": "2026-04-08T22:36:13.898572"
+}

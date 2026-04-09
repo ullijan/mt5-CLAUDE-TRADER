@@ -1,0 +1,12 @@
+[
+  {
+    "date": "2026-04-07",
+    "analysis": "Heute war ein gemischter Tag mit 2 Winnern und 2 Losern. GBPAUD und EURNZD liefen perfekt - beide hatten klare Trendbestätigung auf D1 und H4. Die Verlierer GBPNZD und NZDCAD zeigten, dass selbst bei guter Setup-Erkennung die Execution kritisch ist - möglicherweise zu früh eingestiegen oder Stop-Loss zu eng gesetzt.",
+    "rules_count": 5
+  },
+  {
+    "date": "2026-04-08",
+    "analysis": "HEUTE LIEF GUT: Der EURGBP SELL war perfekt - Bearish Engulfing nach Failed Breakout über 0.8740 mit EMA-Durchbruch brachte +7.8p. Das zeigt, dass Failed Breakouts mit sofortiger EMA-Penetration starke Reversal-Signale sind.\n\nPROBLEME: EURAUD BUY war ein teurer Fehler (-31.4p). Support-Bounce bei 1.6550 funktionierte nicht, da das übergeordnete D1 Bearish-Environment ignoriert wurde. Bei COUNTER-TREND Trades muss die höhere Timeframe-Struktur stärker gewichtet werden.\n\nSKIP-ANALYSE: Die Skips waren größtenteils richtig - Quality C Setups mit neutralen/gemischten D1 Trends sind schwer tradebar. Besonders USDCHF und GBPCHF zwischen den EMAs sind Choppy-Zonen. Der USDJPY Counter-Trend Skip war intelligent.\n\nVERBESSERUNG: Mehr Respekt vor übergeordneten Trends. Der EURAUD Support-Bounce hätte nicht getradet werden sollen bei klar bearishem D1 Environment. Failed Breakouts mit EMA-Penetration sind dagegen sehr reliable.",
+    "rules_count": 9
+  }
+]
