@@ -5,5 +5,19 @@
     "max_profit_pips": 26.8,
     "tp_pips": 37.6,
     "progress_pct": 71.3
+  },
+  "1583716011": {
+    "symbol": "GBPCHF",
+    "direction": "BUY",
+    "max_profit_pips": 17.9,
+    "tp_pips": 25.8,
+    "progress_pct": 69.4
+  },
+  "1583716240": {
+    "symbol": "AUDJPY",
+    "direction": "BUY",
+    "max_profit_pips": 18.4,
+    "tp_pips": 34.6,
+    "progress_pct": 53.2
   }
 }

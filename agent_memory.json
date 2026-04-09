@@ -485,6 +485,24 @@
       "lot_factor": 1.0,
       "last_update": "2026-04-09T14:33:20.272577",
       "notes": []
+    },
+    "EURUSD|InsideBar|H1": {
+      "symbol": "EURUSD",
+      "pattern": "InsideBar",
+      "timeframe": "H1",
+      "trades": 1,
+      "wins": 0,
+      "losses": 1,
+      "total_pips": -9.3,
+      "win_pips": 0.0,
+      "loss_pips": 9.3,
+      "streak": -1,
+      "blacklisted": false,
+      "blacklist_reason": "",
+      "blacklisted_at": "",
+      "lot_factor": 1.0,
+      "last_update": "2026-04-09T20:43:55.027011",
+      "notes": []
     }
   },
   "symbol_stats": {
@@ -631,8 +649,17 @@
       "lot_factor": 1.0,
       "notes": [],
       "last_update": "2026-04-09T13:47:36.097271"
+    },
+    "EURUSD": {
+      "symbol": "EURUSD",
+      "trades": 1,
+      "wins": 0,
+      "total_pips": -9.3,
+      "lot_factor": 1.0,
+      "notes": [],
+      "last_update": "2026-04-09T20:43:55.027011"
     }
   },
   "global_notes": [],
-  "last_saved": "2026-04-09T14:33:20.274214"
+  "last_saved": "2026-04-09T20:43:55.027528"
 }

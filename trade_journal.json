@@ -401,13 +401,6 @@
   },
   {
     "type": "SKIP",
-    "symbol": "EURAUD",
-    "quality": "C",
-    "reasoning": "Quality C: D1 zeigt klaren Abwärtstrend mit Preis unter beiden EMAs und starker Bearish-Momentum. H4 bestätigt den Trend mit Preis unter EMA20/50 und anhaltender",
-    "timestamp": "2026-04-08T19:03:58.448755"
-  },
-  {
-    "type": "SKIP",
     "symbol": "GBPCHF",
     "quality": "C",
     "reasoning": "Quality C: D1: Preis zwischen den EMAs (EMA20 bei ~1.0540, EMA50 bei ~1.0570) - kein klarer Trend. H4: Preis über beiden EMAs mit steigenden EMAs deutet auf bull",
@@ -755,5 +748,12 @@
     "quality": "C",
     "reasoning": "Quality C: D1: Preis handelt zwischen beiden EMAs (neutral), beide EMAs sind relativ flach - typisches choppy Environment. H4: Preis ebenfalls zwischen EMAs, kei",
     "timestamp": "2026-04-09T19:41:18.282678"
+  },
+  {
+    "type": "SKIP",
+    "symbol": "GBPNZD",
+    "quality": "C",
+    "reasoning": "Quality C: SCHRITT 1: D1 zeigt neutralen Trend - Preis handelt zwischen beiden EMAs (aktuell bei 2.29), beide EMAs sind relativ flach. SCHRITT 2: H4 bestätigt ni",
+    "timestamp": "2026-04-09T20:27:59.133430"
   }
 ]

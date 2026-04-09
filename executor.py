@@ -135,17 +135,16 @@ def open_trade(
 
     # === SICHERHEITS-CHECK: TP muss auf richtiger Seite sein ===
     if direction == "BUY" and tp_price <= entry_price:
-        log.error(f"BLOCKED: BUY {symbol} TP {tp_price} <= Entry {entry_price} — ungültiger Trade!")
+        log.error(f"BLOCKED: BUY TP {tp_price} <= Entry {entry_price} — Order abgelehnt")
         return None
     if direction == "SELL" and tp_price >= entry_price:
-        log.error(f"BLOCKED: SELL {symbol} TP {tp_price} >= Entry {entry_price} — ungültiger Trade!")
+        log.error(f"BLOCKED: SELL TP {tp_price} >= Entry {entry_price} — Order abgelehnt")
         return None
-    # SL muss auch auf der richtigen Seite sein
     if direction == "BUY" and sl_price >= entry_price:
-        log.error(f"BLOCKED: BUY {symbol} SL {sl_price} >= Entry {entry_price} — ungültiger Trade!")
+        log.error(f"BLOCKED: BUY SL {sl_price} >= Entry {entry_price} — Order abgelehnt")
         return None
     if direction == "SELL" and sl_price <= entry_price:
-        log.error(f"BLOCKED: SELL {symbol} SL {sl_price} <= Entry {entry_price} — ungültiger Trade!")
+        log.error(f"BLOCKED: SELL SL {sl_price} <= Entry {entry_price} — Order abgelehnt")
         return None
 
     # --- Order senden ---

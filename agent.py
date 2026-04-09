@@ -381,17 +381,17 @@ def process_setup(setup: Setup, risk: RiskManager, state: dict) -> bool:
     analysis.sl_pips = sl_pips
     analysis.tp_pips = tp_pips
 
-        # === KRITISCHE VALIDIERUNG: TP muss positiv und sinnvoll sein ===
-        if analysis.sl_pips <= 0:
-            log.warning(f"Invalid SL: {analysis.sl_pips}p — SKIP {setup.symbol}")
-            return False
-        if analysis.tp_pips <= 0:
-            log.warning(f"Invalid TP: {analysis.tp_pips}p — korrigiere auf SL * 2.0")
-            analysis.tp_pips = analysis.sl_pips * 2.0
-        if analysis.tp_pips < analysis.sl_pips * MIN_RR_RATIO:
-            analysis.tp_pips = analysis.sl_pips * MIN_RR_RATIO
-            log.info(f"  TP korrigiert auf {analysis.tp_pips:.1f}p (Min R:R {MIN_RR_RATIO})")
-    
+    # === TP/SL VALIDIERUNG (v8 Fix: verhindert TP auf falscher Seite) ===
+    if analysis.sl_pips <= 0:
+        log.warning(f"Invalid SL: {analysis.sl_pips}p — SKIP {setup.symbol}")
+        return False
+    if analysis.tp_pips <= 0:
+        log.warning(f"Invalid TP: {analysis.tp_pips}p — SKIP {setup.symbol}")
+        return False
+    if analysis.tp_pips < analysis.sl_pips * 1.5:
+        analysis.tp_pips = analysis.sl_pips * 1.5
+        log.info(f"  TP korrigiert auf {analysis.tp_pips:.1f}p (Min R:R 1.5)")
+
     # Risk-Check 2 (nach Claude)
     allowed, reason = risk.can_open_trade(setup.symbol)
     if not allowed:
