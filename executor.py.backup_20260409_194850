@@ -133,21 +133,6 @@ def open_trade(
     tp_price    = round(tp_price, digits)
     entry_price = round(entry_price, digits)
 
-    # === SICHERHEITS-CHECK: TP muss auf richtiger Seite sein ===
-    if direction == "BUY" and tp_price <= entry_price:
-        log.error(f"BLOCKED: BUY {symbol} TP {tp_price} <= Entry {entry_price} — ungültiger Trade!")
-        return None
-    if direction == "SELL" and tp_price >= entry_price:
-        log.error(f"BLOCKED: SELL {symbol} TP {tp_price} >= Entry {entry_price} — ungültiger Trade!")
-        return None
-    # SL muss auch auf der richtigen Seite sein
-    if direction == "BUY" and sl_price >= entry_price:
-        log.error(f"BLOCKED: BUY {symbol} SL {sl_price} >= Entry {entry_price} — ungültiger Trade!")
-        return None
-    if direction == "SELL" and sl_price <= entry_price:
-        log.error(f"BLOCKED: SELL {symbol} SL {sl_price} <= Entry {entry_price} — ungültiger Trade!")
-        return None
-
     # --- Order senden ---
     request = {
         "action":    mt5.TRADE_ACTION_DEAL,

@@ -401,13 +401,6 @@
   },
   {
     "type": "SKIP",
-    "symbol": "NZDCAD",
-    "quality": "C",
-    "reasoning": "Quality C: D1 zeigt gemischte Signale - Preis ist über EMA20 aber unter EMA50 mit bearisher Divergenz am rechten Rand. H4 zeigt starken bullishen Momentum mit gr",
-    "timestamp": "2026-04-08T18:04:23.578816"
-  },
-  {
-    "type": "SKIP",
     "symbol": "EURAUD",
     "quality": "C",
     "reasoning": "Quality C: D1 zeigt klaren Abwärtstrend mit Preis unter beiden EMAs und starker Bearish-Momentum. H4 bestätigt den Trend mit Preis unter EMA20/50 und anhaltender",
@@ -755,5 +748,12 @@
     "quality": "C",
     "reasoning": "Quality C: D1 zeigt neutralen Trend mit Preis zwischen beiden EMAs (EMA20 bei ~2.00, EMA50 fallend). H4 zeigt zwar bearishe Struktur mit Preis unter beiden EMAs,",
     "timestamp": "2026-04-09T19:11:27.212828"
+  },
+  {
+    "type": "SKIP",
+    "symbol": "GBPNZD",
+    "quality": "C",
+    "reasoning": "Quality C: D1: Preis handelt zwischen beiden EMAs (neutral), beide EMAs sind relativ flach - typisches choppy Environment. H4: Preis ebenfalls zwischen EMAs, kei",
+    "timestamp": "2026-04-09T19:41:18.282678"
   }
 ]
