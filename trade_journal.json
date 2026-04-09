@@ -380,11 +380,24 @@
     "result": null
   },
   {
-    "type": "SKIP",
-    "symbol": "GBPUSD",
-    "quality": "C",
-    "reasoning": "Quality C: D1 zeigt starken Abwärtstrend unter beiden EMAs und Preis unter 1.3575 Resistance. H4 bestätigt mit Preis über EMA20 aber unter EMA50, was gemischte S",
-    "timestamp": "2026-04-08T18:04:12.858282"
+    "ticket": 1583939707,
+    "symbol": "EURUSD",
+    "direction": "BUY",
+    "lot": 0.01,
+    "entry_price": 1.17046,
+    "sl_price": 1.1687800000000002,
+    "tp_price": 1.17395,
+    "quality": "B",
+    "confidence": 75,
+    "reasoning": "D1: Preis handelt zwischen den EMAs bei 1.1704, beide EMAs sind relativ flach - neutraler Trend. H4: Klarer Aufwärtstrend mit Preis über beiden steigenden EMAs, bestätigt bullishe Richtung. H1: Sauberer Breakout über EMA20 Widerstand mit steigenden EMAs. Setup ist solide mit H4/H1 Alignment, aber D1 Neutralität reduziert Qualität auf B gemäß Regel 9. Risk: D1 Trend ist neutral/seitwärts mit flachen EMAs, was zu choppy Price Action führen kann",
+    "watchlist_reasoning": "",
+    "opened_at": "2026-04-09T19:11:14.991127",
+    "closed_at": null,
+    "close_price": null,
+    "pips": null,
+    "profit_usd": null,
+    "close_reasoning": null,
+    "result": null
   },
   {
     "type": "SKIP",
@@ -735,5 +748,12 @@
     "quality": "C",
     "reasoning": "Quality C: D1 zeigt starken Aufwärtstrend mit Preis über beiden EMAs und steigenden EMAs. H4 bestätigt jedoch NICHT - hier sehen wir eine massive Rejection vom 1",
     "timestamp": "2026-04-09T18:11:18.587362"
+  },
+  {
+    "type": "SKIP",
+    "symbol": "EURNZD",
+    "quality": "C",
+    "reasoning": "Quality C: D1 zeigt neutralen Trend mit Preis zwischen beiden EMAs (EMA20 bei ~2.00, EMA50 fallend). H4 zeigt zwar bearishe Struktur mit Preis unter beiden EMAs,",
+    "timestamp": "2026-04-09T19:11:27.212828"
   }
 ]
